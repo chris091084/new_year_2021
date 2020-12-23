@@ -1,0 +1,10 @@
+body{
+    background:url(conspiration.jpg);
+    background-attachment: fixed;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-repeat: no-reapet !important;
+    background-position: top !important;
+    background-size: cover !important;
+    color: white !important;
+}

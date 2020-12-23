@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex align-items-stretch" >
+            <div class="col-sm-3"  ></div>
+        <div class="col-sm-6 text-center" >
+            <h1 style='font-size: 3em;'>2020 se termine dans </h1>
+        </div>
+        <div class="col-sm-3" ></div>
+        </div>
+
+        <div class="row d-flex align-items-stretch" style = "height: 850px;">
+                <div class="col-sm-3 "  ></div>
+        <div class="col-sm-6 text-center align-self-center" >
+            <div style='font-size: 3em;' id="time-elapsed"></div>
+        </div>
+        <div class="col-sm-3 " ></div>
+        </div>
+                
+            
+        </div>
+    </div>
+    <script>
+        var startDateTime = new Date(2021,0,1,00,00,00,0); // YYYY (M-1) D H m s ms (start time and date from DB)
+var startStamp = startDateTime.getTime();
+
+var newDate = new Date();
+var newStamp = newDate.getTime();
+
+var timer;
+
+function updateClock() {
+       newDate = new Date();
+       newStamp = newDate.getTime();
+       var diff = Math.round((startStamp-newStamp)/1000);
+       
+       var d = Math.floor(diff/(24*60*60)); /* though I hope she won't be working for consecutive days :) */
+       diff = diff-(d*24*60*60);
+       var h = Math.floor(diff/(60*60));
+       diff = diff-(h*60*60);
+       var m = Math.floor(diff/(60));
+       diff = diff-(m*60);
+       var s = diff;
+       
+       document.getElementById("time-elapsed").innerHTML = d+" jour(s), "+h+" heures(s), "+m+" minute(s), "+s+" seconde(s)";
+}
+
+setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
