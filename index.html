@@ -22,7 +22,7 @@
         <div class="row d-flex align-items-stretch" style = "height: 500px;">
                 <div class="col-sm-3 "  ></div>
         <div class="col-sm-6 text-center align-self-center" >
-            <div style='font-size: 3em;' id="time-elapsed"></div>
+            <div style='font-size: 2.3em;' id="time-elapsed"></div>
         </div>
         <div class="col-sm-3 " ></div>
         </div>
@@ -74,7 +74,7 @@ function updateClock() {
        diff = diff-(m*60);
        var s = diff;
        
-       document.getElementById("time-elapsed").innerHTML = d+" jours, "+h+" heures, "+m+" minutes, "+s+" secondes";
+       document.getElementById("time-elapsed").innerHTML = d+" jours, "+h+" heures, "+m+"   minutes,<br> "+s+" secondes";
 }
 
 setInterval(updateClock, 1000);
