@@ -8,3 +8,14 @@ body{
     background-size: cover !important;
     color: white !important;
 }
+
+
+h2{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5em !important;
+}
+img{
+    border-radius: 10px;
+}
