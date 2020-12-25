@@ -14,7 +14,7 @@
         <div class="row d-flex align-items-stretch" >
             <div class="col-sm-3"  ></div>
         <div class="col-sm-6 text-center" >
-            <h1 class="mw-10" >Le compte à rebour est lancé. On compte sur vous!<br> 2020 se termine dans </h1>
+            <h1 class="mw-10" >Le compte à rebours est lancé. On compte sur vous!<br> 2020 se termine dans </h1>
         </div>
         <div class="col-sm-3" ></div>
         </div>
@@ -74,7 +74,7 @@ function updateClock() {
        diff = diff-(m*60);
        var s = diff;
        
-       document.getElementById("time-elapsed").innerHTML = d+" jour(s), "+h+" heures(s), "+m+" minute(s), "+s+" seconde(s)";
+       document.getElementById("time-elapsed").innerHTML = d+" jours, "+h+" heures, "+m+" minutes, "+s+" secondes";
 }
 
 setInterval(updateClock, 1000);
