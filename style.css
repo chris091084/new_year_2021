@@ -19,3 +19,10 @@ h2{
 img{
     border-radius: 10px;
 }
+
+a{
+    text-decoration:none !important;
+    color: black !important;
+    font-size: 1.5em;;
+
+}
