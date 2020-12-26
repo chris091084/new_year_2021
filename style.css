@@ -14,7 +14,7 @@ h2{
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 5em !important;
+    font-size: 4.5rem !important;
 }
 img{
     border-radius: 10px;
@@ -26,3 +26,14 @@ a{
     font-size: 1.5em;;
 
 }
+.link{
+
+    height: 500px;
+}
+
+
+@media screen and (max-width: 640px) {
+    .link {
+        height: 350px;
+    }
+  }
